@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тейбл-тент — Елена Белова</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+    @page { size: A4 portrait; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { width: 210mm; height: 297mm; margin: 0; }
+    body { color: #343A2E; background: #F2EDE2; font-family: 'Manrope', Arial, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .sheet {
+      position: relative; width: 210mm; height: 297mm; overflow: hidden;
+      padding: 10mm 11mm 9mm;
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(231,185,178,.52), transparent 32%),
+        radial-gradient(ellipse at 0% 100%, rgba(183,198,214,.34), transparent 34%),
+        linear-gradient(145deg,#F2EDE2 0%,#F5F0E6 62%,#E7E8DC 100%);
+    }
+    .sheet::before, .sheet::after {
+      content: ""; position: absolute; z-index: 0; width: 76mm; height: 76mm;
+      right: -52mm; top: 21mm; border: 1px solid rgba(110,119,92,.22); border-radius: 50%;
+    }
+    .sheet::after { width: 65mm; height: 65mm; right: -45mm; top: 26.5mm; border-width: 4mm; opacity: .32; }
+    .masthead {
+      position: relative; z-index: 1; min-height: 39mm; display: grid;
+      grid-template-columns: 1fr 39mm; gap: 7mm; align-items: center;
+      padding: 3mm 3mm 3mm 5mm; border: 1px solid rgba(110,119,92,.48);
+      border-radius: 3mm; background: rgba(242,237,226,.72);
+    }
+    .masthead-copy { min-width: 0; }
+    .eyebrow { margin: 0 0 1mm; color: #6E775C; font-size: 7pt; letter-spacing: .17em; font-weight: 800; }
+    h1 { margin: 0; color: #343A2E; font: 600 30pt/.9 'Cormorant Garamond', Georgia, serif; letter-spacing: -.035em; }
+    h1 em { display: block; margin-top: 1mm; color: #C47A5C; font-weight: 500; }
+    .credentials { margin: 2mm 0 0; color: #59624E; font-size: 7.5pt; line-height: 1.35; }
+    .portrait { width: 39mm; height: 32mm; margin: 0; overflow: hidden; border: 1px solid rgba(110,119,92,.45); border-radius: 2mm; background: #A7B59C; }
+    .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0%; }
+    .services { position: relative; z-index: 1; display: grid; gap: 3mm; margin-top: 4mm; }
+    .service {
+      min-height: 32mm; display: grid; grid-template-columns: 4mm 1fr; gap: 3mm; align-items: center;
+      padding: 3mm 5mm; border: 1px solid rgba(110,119,92,.42); border-radius: 2mm;
+      background: rgba(250,247,240,.78);
+    }
+    .service-mark { width: 2mm; height: 19mm; border-radius: 2mm; background: #A7B59C; }
+    .service:nth-child(2) .service-mark { background: #E7B9B2; }
+    .service:nth-child(3) .service-mark { background: #B7C6D6; }
+    .service:nth-child(4) .service-mark { background: #C47A5C; }
+    .service:nth-child(5) .service-mark { background: #6E775C; }
+    .service h2 { margin: 0 0 1mm; color: #343A2E; font: 600 16pt/1 'Cormorant Garamond', Georgia, serif; letter-spacing: -.02em; }
+    .service p { max-width: 168mm; margin: 0; color: #505849; font-size: 8.3pt; line-height: 1.35; }
+    .address {
+      position: relative; z-index: 1; margin-top: 4mm; padding: 2.5mm 4mm;
+      border: 1px solid rgba(110,119,92,.44); border-radius: 2mm;
+      color: #343A2E; background: rgba(167,181,156,.38); font-size: 8pt; line-height: 1.3;
+    }
+    .address strong { color: #505A43; font-weight: 800; }
+    .contact-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin-top: 3mm; }
+    .contact-card {
+      min-height: 31mm; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 1mm; padding: 2mm; border: 1px solid rgba(110,119,92,.46); border-radius: 2mm;
+      color: inherit; background: rgba(167,181,156,.38); text-align: center; text-decoration: none;
+    }
+    .contact-card img { width: 23mm; height: 23mm; object-fit: contain; image-rendering: pixelated; }
+    .contact-card strong { color: #343A2E; font-size: 7pt; letter-spacing: .06em; }
+    .phone-symbol { display: grid; place-items: center; width: 12mm; height: 12mm; margin-bottom: 2mm; border: 1px solid #6E775C; border-radius: 50%; color: #6E775C; font-size: 18pt; }
+    .phone-card b { color: #343A2E; font-size: 8pt; line-height: 1.35; }
+    .phone-card small { color: #59624E; font-size: 6.5pt; }
+    .print-hint { position: fixed; top: 12px; right: 12px; z-index: 10; padding: 10px 14px; border: 0; border-radius: 8px; color: #F2EDE2; background: #6E775C; font-weight: 700; cursor: pointer; }
+    @media screen { body { margin: 20px auto; background: #d8d4c8; box-shadow: 0 8px 30px #0003; } }
+    @media print { .print-hint { display: none; } }
+  </style>
+</head>
+<body>
+  <button class="print-hint" onclick="window.print()">Сохранить в PDF / печать</button>
+  <main class="sheet">
+    <header class="masthead">
+      <div class="masthead-copy">
+        <p class="eyebrow">БЕРЕЖНО · ИНДИВИДУАЛЬНО · ТОЛЬКО ДЛЯ ЖЕНЩИН</p>
+        <h1>Массаж<br><em>Елена Белова</em></h1>
+        <p class="credentials">10 лет практики · член НАНМ<br>Девочек-подростков принимаю, если мама — моя постоянная клиентка.</p>
+      </div>
+      <figure class="portrait"><img src="./assets/photos/gallery/session-02.webp" alt="Елена проводит массаж"></figure>
+    </header>
+
+    <section class="services" aria-label="Направления массажа">
+      <article class="service"><span class="service-mark" aria-hidden="true"></span><div><h2>Оздоровительный и восстановительный массаж</h2><p>Общий сеанс для отдыха и бережной работы с телом. Подход и интенсивность согласуем заранее.</p></div></article>
+      <article class="service"><span class="service-mark" aria-hidden="true"></span><div><h2>Лимфодренажный и антистрессовый массаж</h2><p>Отдых и релакс. Темп и глубину воздействия подбираю по вашим ощущениям.</p></div></article>
+      <article class="service"><span class="service-mark" aria-hidden="true"></span><div><h2>Массаж груди и тазового дна</h2><p>Деликатные направления. Вопросы восстановления после грудного вскармливания обсуждаем индивидуально.</p></div></article>
+      <article class="service"><span class="service-mark" aria-hidden="true"></span><div><h2>Массаж лица и БМС</h2><p>Авторский массаж лица и БМС на аппарате Назарова: проработка лица, шеи, зоны декольте и апоневроза.</p></div></article>
+      <article class="service"><span class="service-mark" aria-hidden="true"></span><div><h2>Миофасциальный массаж и АРМ</h2><p>АРМ — артикуляционно-рефлекторный массаж по методике А. С. Иванова.</p></div></article>
+    </section>
+
+    <div class="address"><strong>Где принимаю:</strong> бьюти-коворкинг «Фридом» · Проспект Мира, 95 · 2 минуты от метро «Алексеевская»</div>
+    <footer class="contact-grid" aria-label="Способы связи">
+      <a class="contact-card" href="https://max.ru/u/f9LHodD0cOLz-PeZAoBdfZOWC5n236Ep3u6TfQtZvbzwnW11orOeKJITojw"><img src="./assets/print/qr-max.png" alt="QR-код MAX"><strong>MAX</strong></a>
+      <a class="contact-card" href="https://t.me/elenabelova77"><img src="./assets/print/qr-telegram.png" alt="QR-код Telegram"><strong>TELEGRAM</strong></a>
+      <a class="contact-card" href="https://massagefamily.ru/about.html"><img src="./assets/print/qr-site.png" alt="QR-код сайта"><strong>САЙТ</strong></a>
+      <div class="contact-card phone-card"><span class="phone-symbol" aria-hidden="true">↗</span><b>+7 905<br>792-50-10</b><small>Телефон</small></div>
+    </footer>
+  </main>
+</body>
+</html>

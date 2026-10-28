@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Визитка Елены Беловой — 90 × 50 мм</title>
+  <style>
+    @page { size: 96mm 56mm; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 96mm; height: 112mm; }
+    body { font-family: Arial, Helvetica, sans-serif; color: #f5f8f1; background: #294638; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .card { position:relative;width:96mm;height:56mm;overflow:hidden;padding:5mm;background:radial-gradient(ellipse at 94% 8%,#548061 0,transparent 38%),linear-gradient(150deg,#3b5c49,#263f33 73%);break-after:page;page-break-after:always; }
+    .card:last-child { break-after:auto;page-break-after:auto; }
+    .card::before,.card::after { content:"";position:absolute;pointer-events:none;border:1px solid rgba(184,244,127,.2);border-radius:50%;width:46mm;height:46mm;right:-26mm;top:-27mm; }
+    .card::after { width:38mm;height:38mm;right:-21mm;top:-23mm;border-width:2mm;opacity:.45; }
+    .safe { position:relative;z-index:1;width:100%;height:100%; }
+    .front { display:block; }
+    .brand { display:flex;align-items:center;gap:2mm;color:#f2f6ed;font-weight:700;font-size:7pt;letter-spacing:.01em; }
+    .brand small { display:block;color:#aec6b1;font-size:5.5pt;font-weight:400;margin-top:.4mm; }
+    .leaf { display:grid;place-items:center;width:7mm;height:7mm;border:1px solid #77bc65;border-radius:2mm;color:#b8f47f;font-size:12pt; }
+    .eyebrow { margin:5mm 0 1.5mm;color:#b8f47f;font-size:5.3pt;letter-spacing:.17em;font-weight:bold; }
+    h1 { margin:0;color:#f2f6ed;font-family:Georgia,serif;font-size:19pt;line-height:1.05;font-weight:400;letter-spacing:-.045em; }
+    h1 em { color:#b8f47f;font-weight:400; }
+    .sub { margin:1.8mm 0 0;color:#c0d2c2;font-family:Georgia,serif;font-size:7pt; }
+    .detail { margin:3mm 0 0;padding-top:2mm;border-top:1px solid rgba(184,244,127,.3);color:#a9c5ae;font-size:6pt;line-height:1.4; }
+    .photo { position:absolute;right:0;top:0;width:32mm;height:46mm;border-radius:5mm 5mm 5mm 1mm;overflow:hidden;border:1px solid rgba(210,246,197,.3); }
+    .photo img { display:block;width:100%;height:100%;object-fit:cover;object-position:60% 20%; }
+    .front .brand,.front .eyebrow,.front h1,.front .sub,.front .detail { max-width:49mm; }
+    .back { display:grid;grid-template-columns:1fr 52mm;gap:3mm;align-items:center; }
+    .back-title { margin:0 0 2mm;color:#b8f47f;font-size:5.5pt;letter-spacing:.15em;font-weight:bold; }
+    .back h2 { margin:0;color:#f2f6ed;font-family:Georgia,serif;font-size:11pt;font-weight:400; }
+    .place { margin:1.7mm 0 0;color:#c7d8c8;font-size:6.3pt;line-height:1.4; }
+    .contact-line { margin:2.5mm 0 0;color:#b8f47f;font-size:7pt;font-weight:bold; }
+    .contact-url { margin:1mm 0 0;color:#bed1c1;font-size:5.8pt; }
+    .qr-heading { margin:0 0 1.5mm;text-align:center;color:#bed1c1;font-size:5pt;letter-spacing:.07em; }
+    .qr-list { display:grid;grid-template-columns:repeat(3,1fr);gap:1.4mm; }
+    .qr-card { min-width:0;display:flex;flex-direction:column;align-items:center;gap:.8mm;padding:1.2mm .8mm;border:1px solid rgba(208,245,181,.28);border-radius:2mm;background:rgba(44,81,56,.92); }
+    .qr-card img { display:block;width:15mm;height:15mm;border-radius:.6mm;background:#fff;image-rendering:pixelated; }
+    .qr-card strong { color:#eef5e9;font-size:5pt;letter-spacing:.02em; }
+    .bleed-note { position:fixed;z-index:5;top:4mm;left:4mm;padding:1.5mm 2mm;background:#b8f47f;color:#09251a;font-size:8pt;font-weight:bold; }
+    @media screen { body { height:auto;margin:20px auto;box-shadow:0 8px 30px #0004; } .card { margin-bottom:10px; } }
+    @media print { .bleed-note { display:none; } }
+  </style>
+</head>
+<body>
+  <div class="bleed-note">Визитка 90 × 50 мм · файл с вылетами 3 мм</div>
+  <main class="card">
+    <div class="safe front">
+      <div class="brand"><span class="leaf">✳</span><span>massagefamily<small>Елена Белова · массаж</small></span></div>
+      <p class="eyebrow">ВРЕМЯ ДЛЯ СЕБЯ</p>
+      <h1>Елена<br><em>Белова</em></h1>
+      <p class="sub">Массаж · бережно и индивидуально</p>
+      <p class="detail">10 лет практики · член НАНМ<br>Работаю с женщинами</p>
+      <figure class="photo"><img src="./assets/photos/gallery/session-02.webp" alt="Елена проводит массаж"></figure>
+    </div>
+  </main>
+  <main class="card">
+    <div class="safe back">
+      <section>
+        <p class="back-title">БУДУ РАДА ЗНАКОМСТВУ</p>
+        <h2>Запись и вопросы</h2>
+        <p class="place"><strong>Бьюти-коворкинг «Фридом»</strong><br>Проспект Мира, 95<br>2 минуты от м. «Алексеевская»</p>
+        <p class="contact-line">+7 905 792-50-10</p>
+        <p class="contact-url">massagefamily.ru</p>
+      </section>
+      <section>
+        <p class="qr-heading">НАВЕДИТЕ КАМЕРУ</p>
+        <div class="qr-list">
+          <div class="qr-card"><img src="./assets/print/qr-max.png" alt="QR-код профиля Елены в MAX"><strong>MAX</strong></div>
+          <div class="qr-card"><img src="./assets/print/qr-telegram.png" alt="QR-код Telegram Елены"><strong>TELEGRAM</strong></div>
+          <div class="qr-card"><img src="./assets/print/qr-site.png" alt="QR-код сайта massagefamily"><strong>САЙТ</strong></div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

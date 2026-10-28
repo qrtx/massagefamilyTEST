@@ -1,0 +1,14 @@
+{
+  "name": "massagefamily — массаж и забота о себе",
+  "short_name": "massagefamily",
+  "description": "Бережный массаж Елены Беловой в Москве",
+  "lang": "ru",
+  "start_url": "./about.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F2EDE2",
+  "theme_color": "#F2EDE2",
+  "icons": [
+    { "src": "./assets/leaf.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
